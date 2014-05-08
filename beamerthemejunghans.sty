@@ -1,0 +1,36 @@
+\ProvidesPackage{beamerthemejunghans}[2014/03/01]
+\usepackage{ifsym}
+
+\makeatletter
+\usetheme{Bergen}
+\usefonttheme{junghans}
+\usecolortheme{junghans}
+\useoutertheme[subsection=true]{miniframes}
+\newcommand{\jug@frameofframes}{/}
+\newcommand{\setframeofframes}[1]{\renewcommand{\jug@frameofframes}{#1}}
+\makeatletter
+\setbeamertemplate{footline}
+  {%
+    \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
+      \leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}%
+      \hfill%
+      {\usebeamerfont{institute in head/foot}\usebeamercolor[fg]{institute in head/foot}\insertshortinstitute}%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+      {\usebeamerfont{title in head/foot}\insertshorttitle}%
+      \hfill%
+      {\usebeamerfont{frame number}\usebeamercolor[fg]{frame
+      number}\insertframenumber~\jug@frameofframes~\inserttotalframenumber} \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+    \end{beamercolorbox}
+  }
+
+\setbeamertemplate{mini frame}[box]
+\setbeamertemplate{mini frame in current subsection}[box]
+\makeatother
+
+\setbeamertemplate{navigation symbols}{} %keine Navigationssymbole

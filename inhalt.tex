@@ -1,0 +1,98 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{array}
+\usepackage{bookmark}
+\usepackage{textpos}
+\usepackage{wasysym}
+\usepackage{listliketab}
+\usepackage[NewCommands,NewParameters]{ragged2e}
+\usepackage{tikz}
+
+\usetheme{junghans}
+
+\def\insertauthorindicator{Wer?}% Default is "Who?"
+\def\insertinstituteindicator{Von?}% Default is "From?"
+\def\insertdateindicator{Wann?}% Default is "When?"
+
+%\setbeamertemplate{caption}[numbered]
+
+%%neuer Spaltentyp: linksbündig + Silbentrennung
+\newcolumntype{M}[1]{>{\RaggedRight\hspace{0pt}\arraybackslash}p{#1}}
+
+\author{Marius Spix}
+
+\institute[\raisebox{-1ex}{\includegraphics[height=0.24cm]{images/JW_Kontur}}]{\includegraphics[scale=0.15]{"images/
+J 60 Schwarz_Reflex Blue"}}
+\title{QM-Cockpit}
+
+\addtobeamertemplate{title
+page}{\vspace{1\baselineskip}\hspace{-9ex}\includegraphics[scale=.5]{images/Flaticon_SVGFiles/platform11}\vspace{-2\baselineskip}}
+
+\keywords{Abschlussprüfung, Fachinformatiker, SAP, Qualitätsmanagement,
+Lager, Warenwirtschaft}
+\date{\today}
+
+\begin{document}
+\setcounter{framenumber}{0} 
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\setcounter{figure}{0}
+
+\begin{frame}{"Ubersicht}
+  \tableofcontents
+\end{frame}
+
+\newcommand{\ipsum}[1]{
+\subsection{{#1}}
+\begin{frame}{Lorem Ipsum}
+\onslide<2->{
+\begin{block}{Lorem}
+\begin{itemize}
+  \item<3-> Lorem ipsum
+  \item<4-> Dolor est
+  \item<5-> Sit amit
+  \item<6-> Bla
+\end{itemize}
+\end{block}
+}
+\onslide<8->{
+\begin{block}{Ipsum}
+\begin{enumerate}
+  \item<9-> eins
+  \item<10-> zwei
+  \item<11-> drei
+\end{enumerate}
+\end{block}
+}
+\end{frame}
+}
+
+
+\section{Projektumfeld}
+\ipsum{Bla}
+\ipsum{Blubb}
+\ipsum{Bla}
+\ipsum{Blubb}
+
+\section{Ist-Analyse}
+\ipsum{Bla}
+\ipsum{Blubb}
+
+\section{Soll-Konzept}
+\ipsum{Bla}
+\ipsum{Blubb}
+\ipsum{Bla}
+
+\section{Durchführung}
+\ipsum{Bla}
+\ipsum{Blubb}
+
+\section{Ergebnis}
+\ipsum{Bla}
+\ipsum{Blubb}
+
+\end{document}
+
