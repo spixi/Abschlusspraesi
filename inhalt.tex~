@@ -1,0 +1,225 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{array}
+\usepackage{bookmark}
+\usepackage{textpos}
+\usepackage{wasysym}
+\usepackage{listliketab}
+\usepackage[NewCommands,NewParameters]{ragged2e}
+\usepackage{tikz}
+\usepackage{eurosym}
+\usepackage{textpos}
+\usepackage{comment}
+
+\usetheme{junghans}
+
+\def\insertauthorindicator{Wer?}% Default is "Who?"
+\def\insertinstituteindicator{Von?}% Default is "From?"
+\def\insertdateindicator{Wann?}% Default is "When?"
+
+%\setbeamertemplate{caption}[numbered]
+
+%%neuer Spaltentyp: linksbündig + Silbentrennung
+\newcolumntype{M}[1]{>{\RaggedRight\hspace{0pt}\arraybackslash}p{#1}}
+
+\author{Marius Spix}
+
+\institute[\raisebox{-1ex}{\includegraphics[height=0.24cm]{images/JW_Kontur}}]{\includegraphics[scale=0.15]{images/J_60_Schwarz_Reflex_Blue}}
+\title{QM-Cockpit}
+
+\addtobeamertemplate{title page}{\vspace{1\baselineskip}\hspace{-9ex}\includegraphics[scale=.5]{images/Flaticon_SVGFiles/platform11}\vspace{-2\baselineskip}}
+
+%\addtobeamertemplate{frametitle}{}{
+%\begin{textblock*}{100mm}(-4.15cm,-.55cm)
+%\includegraphics[scale=.33]{images/Fahne2}\end{textblock*}
+%}
+
+\AtBeginSection{\frame{\sectionpage}}
+\AtBeginSubsection{\frame{\subsectionpage}}
+\newtranslation[to=ngerman]{Section}{Abschnitt}
+\newtranslation[to=ngerman]{Subsection}{Unterabschnitt}
+
+\keywords{Abschlussprüfung, Fachinformatiker, SAP, Quali"atsmanagement,
+Lager, Warenwirtschaft}
+\date{\today}
+
+\frenchspacing
+
+\begin{document}
+
+\setcounter{framenumber}{0} 
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\setcounter{figure}{0}
+
+\begin{frame}{"Ubersicht}
+  \tableofcontents
+\end{frame}
+
+\newcommand{\ipsum}[1]{
+\subsection{{#1}}
+\begin{frame}{Lorem Ipsum}
+\onslide<2->{
+\begin{block}{Lorem}
+\begin{itemize}
+  \item<3-> Lorem ipsum
+  \item<4-> Dolor est
+  \item<5-> Sit amit
+  \item<6-> Bla
+\end{itemize}
+\end{block}
+}
+\onslide<8->{
+\begin{block}{Ipsum}
+\begin{enumerate}
+  \item<9-> eins
+  \item<10-> zwei
+  \item<11-> drei
+\end{enumerate}
+\end{block}
+}
+\end{frame}
+}
+
+
+\section{Projektumfeld}
+%Folie Junghans
+\begin{frame}{Das Unternehmen}
+	\begin{block}{foo}
+	\end{block}
+
+	\begin{block}{Plattform}
+		\begin{itemize}
+			\item{seit Sommer 2011}
+			\item{SAP ECC 6.1}
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+%Folie Prozesse im Wareneingang
+
+
+\begin{comment}
+\subsection{Das Unternehmen}
+\begin{frame}{Junghans Unternehmensgruppe}
+			\begin{block}{Fakten}
+				\begin{itemize}
+						\item Versandhandelsgruppe
+						\item Hauptsitz in Aachen
+						\item ca. 540 Mitarbeiter
+						\item vertreten in 7 L"andern
+				\end{itemize}
+			\end{block}
+			\begin{block}{Fakten}
+				\begin{itemize}
+						\item yyyy aktive Kunden
+						\item \EUR{137\,000\,000} Umsatz %Geschäftsjahr 2012/13
+						\item 1\,000\,000 Aufträge
+				\end{itemize}
+			\end{block}
+\end{frame}
+
+\begin{frame}{Produkte}
+	\begin{block}{Junghans Wolle}
+		\begin{itemize}
+			\item Wolle und Garne
+			\item Handarbeitszubeh"or
+			\item K"unstlerbedarf
+		\end{itemize}
+	\end{block}
+	\begin{block}{Pro-Idee}
+		\begin{itemize}
+			\item innovative Produkte aus aller Welt
+			\item Bekleidung
+			\item internationale Weine
+			\item Kunstwerke
+			\item M"obel, K"uchenutensilien
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+
+\subsection{Die DV}
+\begin{frame}{Organisation \& Datenverarbeitung}
+baz
+
+%Mitarbeiter
+\end{frame}
+
+\begin{frame}{SAP-System}
+	\begin{block}{Allgemeines}
+		\begin{itemize}
+			\item seit Sommer 2011
+			\item E
+			\item
+		\end{itemize}
+	\end{block}
+	\begin{block}{Drei Systeme}
+		\begin{itemize}
+			\item seit Sommer 2011
+			\item E
+			\item
+		\end{itemize}
+	\end{block}
+\end{frame}
+\end{comment}
+
+
+\section{Ist-Analyse}
+\begin{frame}{Analyse}
+	\begin{block}{Methoden}
+		\begin{itemize}
+			\item Arbeitsbeobachtung
+			\item Interview
+		\end{itemize}
+	\end{block}
+	\begin{block}{Erkenntnisse}
+		\begin{itemize}
+			\item saisonale Schwankungen
+			\item Personalplanung
+			\item keine Standardfunktionalit"at
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Die Folge}
+
+\begin{columns}
+       \transboxout<2->
+\begin{column}{.45\textwidth}
+	\onslide<2->{\includegraphics[height=.42\textheight]{images/metro_ui_icon_set/Folders_OS/Documents.png}}\\
+	\onslide<4->{\includegraphics[height=.42\textheight]{images/metro_ui_icon_set/Office_Apps/Word_2013.png}}
+\end{column}
+\begin{column}{.45\textwidth}
+	\onslide<3->{\includegraphics[height=.42\textheight]{images/metro_ui_icon_set/Office_Apps/Excel_2013.png}}\\
+	\onslide<5->{\includegraphics[height=.42\textheight]{images/metro_ui_icon_set/Other/Mail.png}}
+\end{column}
+\overlay<6->{\includegraphics[height=\textheight]{images/metro_ui_icon_set/Folders_OS/Documents.png}}
+\end{columns}
+
+%Hier Grafik mit Unordnung
+\end{frame}
+
+
+
+
+\section{Soll-Konzept}
+
+
+\section{Durchf"uhrung}
+\begin{frame}{Entwicklungsprozess}
+\end{frame}
+
+\section{Ergebnis}
+\ipsum{Bla}
+
+{ %schwarze Folie
+\setbeamercolor{background canvas}{bg=black}
+\frame[plain]{}
+} 
+
+\end{document}
+
