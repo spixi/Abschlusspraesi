@@ -5,12 +5,13 @@
 \usepackage{bookmark}
 \usepackage{textpos}
 \usepackage{wasysym}
-\usepackage{listliketab}
+%\usepackage{listliketab}
 \usepackage[NewCommands,NewParameters]{ragged2e}
 \usepackage{tikz}
 \usepackage{eurosym}
 \usepackage{textpos}
 \usepackage{comment}
+
 
 \usetheme{junghans}
 
@@ -61,116 +62,57 @@ Lager, Warenwirtschaft}
   \tableofcontents
 \end{frame}
 
-\newcommand{\ipsum}[1]{
-\subsection{{#1}}
-\begin{frame}{Lorem Ipsum}
-\onslide<2->{
-\begin{block}{Lorem}
-\begin{itemize}
-  \item<3-> Lorem ipsum
-  \item<4-> Dolor est
-  \item<5-> Sit amit
-  \item<6-> Bla
-\end{itemize}
-\end{block}
-}
-\onslide<8->{
-\begin{block}{Ipsum}
-\begin{enumerate}
-  \item<9-> eins
-  \item<10-> zwei
-  \item<11-> drei
-\end{enumerate}
-\end{block}
-}
-\end{frame}
-}
-
-
 \section{Projektumfeld}
-%Folie Junghans
-\begin{frame}{Das Unternehmen}
-	\begin{block}{foo}
-	\end{block}
 
-	\begin{block}{Plattform}
-		\begin{itemize}
-			\item{seit Sommer 2011}
-			\item{SAP ECC 6.1}
-		\end{itemize}
-	\end{block}
+
+\subsection{Der Wareneingang}
+\begin{frame}{Der Wareneingang}
+ \includegraphics[width=.9\textwidth]{Wareneingang}
 \end{frame}
 
-%Folie Prozesse im Wareneingang
-
-
-\begin{comment}
 \subsection{Das Unternehmen}
-\begin{frame}{Junghans Unternehmensgruppe}
+\begin{frame}[<+->]{Junghans Unternehmensgruppe}
 			\begin{block}{Fakten}
-				\begin{itemize}
+				\begin{itemize}[<+->]
 						\item Versandhandelsgruppe
 						\item Hauptsitz in Aachen
 						\item ca. 540 Mitarbeiter
 						\item vertreten in 7 L"andern
 				\end{itemize}
 			\end{block}
-			\begin{block}{Fakten}
-				\begin{itemize}
-						\item yyyy aktive Kunden
-						\item \EUR{137\,000\,000} Umsatz %Geschäftsjahr 2012/13
-						\item 1\,000\,000 Aufträge
+
+			\begin{block}{Sortiment}
+				\begin{itemize}[<+->]
+						\item Junghans Wolle
+						\item Pro-Idee
 				\end{itemize}
 			\end{block}
 \end{frame}
 
-\begin{frame}{Produkte}
-	\begin{block}{Junghans Wolle}
-		\begin{itemize}
-			\item Wolle und Garne
-			\item Handarbeitszubeh"or
-			\item K"unstlerbedarf
-		\end{itemize}
-	\end{block}
-	\begin{block}{Pro-Idee}
-		\begin{itemize}
-			\item innovative Produkte aus aller Welt
-			\item Bekleidung
-			\item internationale Weine
-			\item Kunstwerke
-			\item M"obel, K"uchenutensilien
-		\end{itemize}
-	\end{block}
+\begin{frame}[<+->]{Organisation \& Datenverarbeitung}
+			\begin{block}{Die DV}
+				\begin{itemize}
+						\item 21 Mitarbeiter
+						\begin{itemize}
+							\item IT-Services
+							\item \alert<6>{Anwendungssysteme}
+							\item Betriebsorganisation
+						\end{itemize}
+				\end{itemize}
+			\end{block}
+			\pause
+			\begin{block}{SAP}
+				\begin{itemize}[<+->]
+						\item Einf"uhrung: Juli 2011
+						\item SAP ECC 6.0
+						\item SAP NetWeaver BI 7.1
+						\item 3-System-Landschaft
+				\end{itemize}
+			\end{block}
 \end{frame}
-
-
-\subsection{Die DV}
-\begin{frame}{Organisation \& Datenverarbeitung}
-baz
-
-%Mitarbeiter
-\end{frame}
-
-\begin{frame}{SAP-System}
-	\begin{block}{Allgemeines}
-		\begin{itemize}
-			\item seit Sommer 2011
-			\item E
-			\item
-		\end{itemize}
-	\end{block}
-	\begin{block}{Drei Systeme}
-		\begin{itemize}
-			\item seit Sommer 2011
-			\item E
-			\item
-		\end{itemize}
-	\end{block}
-\end{frame}
-\end{comment}
-
 
 \section{Ist-Analyse}
+\subsection{Ist-Analyse}
 \begin{frame}[<+->]{Analyse}
 	\begin{block}{Methoden}
 		\begin{itemize}[<+->]
@@ -187,7 +129,7 @@ baz
 	\end{block}
 \end{frame}
 
-\begin{frame}{Die Folge}
+\begin{frame}{Derzeitige Lösungen}
 
 \begin{center}
 \onslide<2->{\includegraphics[height=.40\textheight]{images/metro_ui_icon_set/Office_Apps/Excel_2013.png}} \vspace{1ex}
@@ -211,7 +153,6 @@ baz
 \end{frame}
 
 \section{Ergebnis}
-\ipsum{Bla}
 
 { %schwarze Folie
 \setbeamercolor{background canvas}{bg=black}
