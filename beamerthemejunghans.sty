@@ -1,14 +1,12 @@
 \ProvidesPackage{beamerthemejunghans}[2014/03/01]
 \usepackage{ifsym}
 
-\makeatletter
 \usetheme{Bergen}
 \usefonttheme{junghans}
 \usecolortheme{junghans}
 \useoutertheme[subsection=true]{miniframes}
 \newcommand{\jug@frameofframes}{/}
 \newcommand{\setframeofframes}[1]{\renewcommand{\jug@frameofframes}{#1}}
-\makeatletter
 \setbeamertemplate{footline}
   {%
     \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
@@ -31,6 +29,6 @@
 
 \setbeamertemplate{mini frame}[box]
 \setbeamertemplate{mini frame in current subsection}[box]
-\makeatother
-
 \setbeamertemplate{navigation symbols}{} %keine Navigationssymbole
+
+\addtobeamertemplate{background canvas}{\transfade}{} %Übergangseffekt
