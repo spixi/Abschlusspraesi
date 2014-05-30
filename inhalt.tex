@@ -12,7 +12,6 @@
 \usepackage{textpos}
 \usepackage{comment}
 
-
 \usetheme{junghans}
 
 \def\insertauthorindicator{Wer?}% Default is "Who?"
@@ -21,12 +20,12 @@
 
 %\setbeamertemplate{caption}[numbered]
 
-%%neuer Spaltentyp: linksbündig + Silbentrennung
+%%neuer Spaltentyp: linksb"undig + Silbentrennung
 \newcolumntype{M}[1]{>{\RaggedRight\hspace{0pt}\arraybackslash}p{#1}}
 
 \author{Marius Spix}
 
-\institute[\raisebox{-1ex}{\includegraphics[height=0.24cm]{images/JW_Kontur}}]{\includegraphics[scale=0.15]{images/J_60_Schwarz_Reflex_Blue}}
+\institute[\raisebox{-1ex}{\includegraphics[height=0.24cm]{images/JW_Kontur}}]{\includegraphics[scale=0.3]{images/J_60_Schwarz_Reflex_Blue}}
 \title{QM-Cockpit}
 
 \addtobeamertemplate{title page}{\vspace{1\baselineskip}\hspace{-9ex}\includegraphics[scale=.5]{images/Flaticon_SVGFiles/platform11}\vspace{-2\baselineskip}}
@@ -43,7 +42,7 @@
 \newtranslation[to=ngerman]{Section}{Abschnitt}
 \newtranslation[to=ngerman]{Subsection}{Unterabschnitt}
 
-\keywords{Abschlussprüfung, Fachinformatiker, SAP, Quali"atsmanagement,
+\keywords{Abschlusspr"ufung, Fachinformatiker, SAP, Quali"atsmanagement,
 Lager, Warenwirtschaft}
 \date{\today}
 
@@ -64,13 +63,7 @@ Lager, Warenwirtschaft}
 
 \section{Projektumfeld}
 
-
-\subsection{Der Wareneingang}
-\begin{frame}{Der Wareneingang}
- \includegraphics[width=.9\textwidth]{Wareneingang}
-\end{frame}
-
-\subsection{Das Unternehmen}
+\subsection{Unternehmen}
 \begin{frame}[<+->]{Junghans Unternehmensgruppe}
 			\begin{block}{Fakten}
 				\begin{itemize}[<+->]
@@ -87,6 +80,11 @@ Lager, Warenwirtschaft}
 						\item Pro-Idee
 				\end{itemize}
 			\end{block}
+\end{frame}
+
+\subsection{Prozess Wareneingang}
+\begin{frame}{Der Wareneingang}
+ \includegraphics[width=.9\textwidth]{Wareneingang}
 \end{frame}
 
 \begin{frame}[<+->]{Organisation \& Datenverarbeitung}
@@ -118,39 +116,68 @@ Lager, Warenwirtschaft}
 		\begin{itemize}[<+->]
 			\item Arbeitsbeobachtung
 			\item Interview
+			\item Datenbankanalyse
 		\end{itemize}
 	\end{block}
 	\begin{block}{Erkenntnisse}
 		\begin{itemize}[<+->]
-			\item saisonale Schwankungen
-			\item Personalplanung
+			\item Personalplanung: saisonale Schwankungen
 			\item keine Standardfunktionalit"at
+			\item diverse Datenquellen
+			\item hoher Normalisierungsgrad
 		\end{itemize}
 	\end{block}
 \end{frame}
 
-\begin{frame}{Derzeitige Lösungen}
+\section{Soll-Konzept}
+\begin{frame}[<+->]{Soll-Konzept}
 
-\begin{center}
-\onslide<2->{\includegraphics[height=.40\textheight]{images/metro_ui_icon_set/Office_Apps/Excel_2013.png}} \vspace{1ex}
-\onslide<3->{\includegraphics[height=.40\textheight]{images/metro_ui_icon_set/System_Icons/Sticky_Notes.png}}\\[-.6ex]
-\onslide<3->{\includegraphics[height=.40\textheight]{images/metro_ui_icon_set/Folders_OS/Documents.png}}
-\vspace{1ex}
-\onslide<2->{\includegraphics[height=.40\textheight]{images/metro_ui_icon_set/Office_Apps/Word_2013.png}}
-\end{center}
+	\begin{block}{Sachziel}
+		\begin{itemize}
+			\item Vereinfachung der Auswertungen 
+			\item zentrale Controlling-Oberfl"ache
+			\item Auswertung der Pr"uflosbearbeitungszeit 
+		\end{itemize}
+	\end{block}
+	
+	\begin{block}{Qualitative Ziele}
+		\begin{itemize}
+			\item nahtlose Integration in SAP
+			\item aktuelle Daten
+			\item hohe Performance
+			\item Erweiterbarkeit
+		\end{itemize}
+	\end{block}
 
-%Hier Grafik mit Unordnung
 \end{frame}
 
 
+\begin{comment}
+	\begin{block}{Grobkonzept}
+		\begin{itemize}
+			\item denormalisiertes Datenmodell
+			\item zentrale Controlling-Oberfl"ache
+			\item Auswertung der Pr"uflosbearbeitungszeit 
+		\end{itemize}
+	\end{block}
+\end{comment}
 
-
-\section{Soll-Konzept}
 
 
 \section{Durchf"uhrung}
-\begin{frame}{Entwicklungsprozess}
+\subsection{Durchf"uhrung}
+\begin{frame}{Aufbau}
+ \begin{overlayarea}{\textwidth}{\textheight}
+  \only<1>{\includegraphics[width=\textwidth]{MVP0}}
+  \only<2>{\includegraphics[width=\textwidth]{MVP1}}
+  \only<3>{\includegraphics[width=\textwidth]{MVP2}}
+  \only<4>{\includegraphics[width=\textwidth]{MVP3}}
+ \end{overlayarea}
 \end{frame}
+\begin{frame}{Entwicklungsprozess}
+ \includegraphics[width=\textwidth]{FDD}
+\end{frame}
+
 
 \section{Ergebnis}
 
