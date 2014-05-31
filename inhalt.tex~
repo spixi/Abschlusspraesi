@@ -35,10 +35,8 @@
 %\includegraphics[scale=.33]{images/Fahne2}\end{textblock*}
 %}
 
-
-
 \AtBeginSection{\frame{\sectionpage}}
-%\AtBeginSubsection{\frame{\subsectionpage}}
+\AtBeginSubsection{\frame{\subsectionpage}}
 \newtranslation[to=ngerman]{Section}{Abschnitt}
 \newtranslation[to=ngerman]{Subsection}{Unterabschnitt}
 
@@ -63,7 +61,7 @@ Lager, Warenwirtschaft}
 
 \section{Projektumfeld}
 
-\subsection{Unternehmen}
+\subsection{Betrieb}
 \begin{frame}[<+->]{Junghans Unternehmensgruppe}
 			\begin{block}{Fakten}
 				\begin{itemize}[<+->]
@@ -74,17 +72,12 @@ Lager, Warenwirtschaft}
 				\end{itemize}
 			\end{block}
 
-			\begin{block}{Sortiment}
+			\begin{block}{Sortimente}
 				\begin{itemize}[<+->]
 						\item Junghans Wolle
 						\item Pro-Idee
 				\end{itemize}
 			\end{block}
-\end{frame}
-
-\subsection{Prozess Wareneingang}
-\begin{frame}{Der Wareneingang}
- \includegraphics[width=.9\textwidth]{Wareneingang}
 \end{frame}
 
 \begin{frame}[<+->]{Organisation \& Datenverarbeitung}
@@ -109,7 +102,12 @@ Lager, Warenwirtschaft}
 			\end{block}
 \end{frame}
 
-\section{Ist-Analyse}
+\subsection{Prozess Wareneingang}
+\begin{frame}{Wareneingang}
+ \includegraphics[width=.9\textwidth]{Wareneingang}
+\end{frame}
+
+\section{Das Projekt}
 \subsection{Ist-Analyse}
 \begin{frame}[<+->]{Analyse}
 	\begin{block}{Methoden}
@@ -129,10 +127,9 @@ Lager, Warenwirtschaft}
 	\end{block}
 \end{frame}
 
-\section{Soll-Konzept}
+\subsection{Soll-Konzept}
 \begin{frame}[<+->]{Soll-Konzept}
-
-	\begin{block}{Sachziel}
+	\begin{block}{Ziel}
 		\begin{itemize}
 			\item Vereinfachung der Auswertungen 
 			\item zentrale Controlling-Oberfl"ache
@@ -140,7 +137,7 @@ Lager, Warenwirtschaft}
 		\end{itemize}
 	\end{block}
 	
-	\begin{block}{Qualitative Ziele}
+	\begin{block}{Kriterien}
 		\begin{itemize}
 			\item nahtlose Integration in SAP
 			\item aktuelle Daten
@@ -151,35 +148,30 @@ Lager, Warenwirtschaft}
 
 \end{frame}
 
-
-\begin{comment}
-	\begin{block}{Grobkonzept}
-		\begin{itemize}
-			\item denormalisiertes Datenmodell
-			\item zentrale Controlling-Oberfl"ache
-			\item Auswertung der Pr"uflosbearbeitungszeit 
-		\end{itemize}
-	\end{block}
-\end{comment}
-
-
-
-\section{Durchf"uhrung}
 \subsection{Durchf"uhrung}
-\begin{frame}{Aufbau}
- \begin{overlayarea}{\textwidth}{\textheight}
-  \only<1>{\includegraphics[width=\textwidth]{MVP0}}
-  \only<2>{\includegraphics[width=\textwidth]{MVP1}}
-  \only<3>{\includegraphics[width=\textwidth]{MVP2}}
-  \only<4>{\includegraphics[width=\textwidth]{MVP3}}
- \end{overlayarea}
-\end{frame}
 \begin{frame}{Entwicklungsprozess}
  \includegraphics[width=\textwidth]{FDD}
 \end{frame}
+\begin{frame}{Aufbau}
+ \vspace{3ex}
+ \begin{overlayarea}{\textwidth}{\textheight}
+  \only<1>{\includegraphics[width=\textwidth]{MVP0}<handout:0>}
+  \only<2>{\includegraphics[width=\textwidth]{MVP1}<handout:0>}
+  \only<3>{\includegraphics[width=\textwidth]{MVP2}<handout:0>}
+  \only<4>{\includegraphics[width=\textwidth]{MVP3}}
+ \end{overlayarea}
+\end{frame}
 
 
-\section{Ergebnis}
+\section{Fazit}
+\subsection{Projektergebnis}
+\begin{frame}{80\,\% Zeitersparnis}
+\includegraphics[width=\textwidth]{Balken}
+\end{frame}
+\subsection{Lessons Learned}
+\begin{frame}{}
+
+\end{frame}
 
 { %schwarze Folie
 \setbeamercolor{background canvas}{bg=black}

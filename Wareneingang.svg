@@ -34,38 +34,6 @@
   <defs
      id="defs6">
     <pattern
-       inkscape:collect="always"
-       xlink:href="#pattern87"
-       id="pattern88"
-       patternTransform="translate(120.96452,564.19365)" />
-    <pattern
-       inkscape:collect="always"
-       xlink:href="#pattern87"
-       id="pattern86"
-       patternTransform="translate(120.96452,564.19365)" />
-    <pattern
-       inkscape:collect="always"
-       xlink:href="#pattern87"
-       id="pattern234"
-       patternTransform="translate(88.43761,630.66169)" />
-    <pattern
-       inkscape:collect="always"
-       xlink:href="#pattern87"
-       id="pattern232"
-       patternTransform="translate(88.43761,630.66169)" />
-    <linearGradient
-       id="linearGradient222"
-       osb:paint="gradient">
-      <stop
-         style="stop-color:#000000;stop-opacity:1;"
-         offset="0"
-         id="stop224" />
-      <stop
-         style="stop-color:#000000;stop-opacity:0;"
-         offset="1"
-         id="stop226" />
-    </linearGradient>
-    <pattern
        patternUnits="userSpaceOnUse"
        width="140.75"
        height="145.28125"
@@ -210,7 +178,7 @@
      d="m 3890.9298,516.33459 a 69.368279,69.368279 0 1 1 -138.7366,0 69.368279,69.368279 0 1 1 138.7366,0 z"
      transform="matrix(0.11380537,0,0,0.11380537,-112.97553,315.64918)" />
   <rect
-     style="color:#000000;fill:url(#pattern88);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     style="color:#000000;fill:url(#pattern87);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
      id="rect245"
      width="30.142561"
      height="29.424887"
@@ -293,7 +261,7 @@
      d="m 3890.9298,516.33459 a 69.368279,69.368279 0 1 1 -138.7366,0 69.368279,69.368279 0 1 1 138.7366,0 z"
      transform="matrix(0.11380537,0,0,0.11380537,107.88501,450.0753)" />
   <rect
-     style="color:#000000;fill:url(#pattern234);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     style="color:#000000;fill:url(#pattern87);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
      id="rect245-1"
      width="30.142561"
      height="29.424887"
@@ -301,7 +269,7 @@
      y="456.13803"
      ry="3.2295611" />
   <rect
-     style="color:#000000;fill:url(#pattern232);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     style="color:#000000;fill:url(#pattern87);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
      id="rect245-9-8"
      width="30.142561"
      height="29.424887"
@@ -455,7 +423,7 @@
      y="321.71198"
      ry="3.2295611" />
   <rect
-     style="color:#000000;fill:url(#pattern86);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     style="color:#000000;fill:url(#pattern87);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
      id="rect245-9-02-6"
      width="30.142561"
      height="29.424887"
