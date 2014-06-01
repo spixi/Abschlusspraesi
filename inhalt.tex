@@ -36,7 +36,7 @@
 %}
 
 \AtBeginSection{\frame{\sectionpage}}
-\AtBeginSubsection{\frame{\subsectionpage}}
+%\AtBeginSubsection{\frame{\subsectionpage}}
 \newtranslation[to=ngerman]{Section}{Abschnitt}
 \newtranslation[to=ngerman]{Subsection}{Unterabschnitt}
 
@@ -86,7 +86,7 @@ Lager, Warenwirtschaft}
 						\item 21 Mitarbeiter
 						\begin{itemize}
 							\item IT-Services
-							\item \alert<6>{Anwendungssysteme}
+							\item \textbf<6>{Anwendungssysteme}
 							\item Betriebsorganisation
 						\end{itemize}
 				\end{itemize}
@@ -150,27 +150,35 @@ Lager, Warenwirtschaft}
 
 \subsection{Durchf"uhrung}
 \begin{frame}{Entwicklungsprozess}
- \includegraphics[width=\textwidth]{FDD}
-\end{frame}
-\begin{frame}{Aufbau}
- \vspace{3ex}
+ \vspace{2ex}
  \begin{overlayarea}{\textwidth}{\textheight}
+  \only<1>{\includegraphics[width=\textwidth]{FDD1}<handout:0>}
+  \only<2>{\includegraphics[width=\textwidth]{FDD2}<handout:0>}
+  \only<3>{\includegraphics[width=\textwidth]{FDD3}<handout:0>}
+  \only<4>{\includegraphics[width=\textwidth]{FDD4}<handout:0>}
+  \only<5>{\includegraphics[width=\textwidth]{FDD5}}
+ \end{overlayarea}
+\end{frame}
+\begin{frame}{Aufbau QM-Cockpit}
+ \vspace{3ex}
+ \begin{overlayarea}{\textwidth}{.67\textheight}
   \only<1>{\includegraphics[width=\textwidth]{MVP0}<handout:0>}
   \only<2>{\includegraphics[width=\textwidth]{MVP1}<handout:0>}
   \only<3>{\includegraphics[width=\textwidth]{MVP2}<handout:0>}
-  \only<4>{\includegraphics[width=\textwidth]{MVP3}}
+  \only<4>{\includegraphics[width=\textwidth]{MVP3}<handout:0>}
+  \only<5>{\includegraphics[width=\textwidth]{MVP4}}
  \end{overlayarea}
+ \begin{block}{\onslide<2->\textbf<2>{Model} \onslide<3->\textbf<3>{View} \onslide<4->\textbf<4>{Presenter}}\end{block}
 \end{frame}
-
 
 \section{Fazit}
 \subsection{Projektergebnis}
-\begin{frame}{80\,\% Zeitersparnis}
-\includegraphics[width=\textwidth]{Balken}
+\begin{frame}{\alt<1>{70 Stunden Projektzeit}{80\,\% Zeitersparnis}}
+\includegraphics<2->[width=\textwidth]{Balken}
 \end{frame}
 \subsection{Lessons Learned}
 \begin{frame}{}
-
+TODO
 \end{frame}
 
 \end{document}
