@@ -17,6 +17,8 @@
 \def\insertauthorindicator{Wer?}% Default is "Who?"
 \def\insertinstituteindicator{Von?}% Default is "From?"
 \def\insertdateindicator{Wann?}% Default is "When?"
+%\def\theDate{\today}
+\def\theDate{3. Juni 2014}
 
 %\setbeamertemplate{caption}[numbered]
 
@@ -28,7 +30,7 @@
 \institute[\raisebox{-1ex}{\includegraphics[height=0.24cm]{images/JW_Kontur}}]{\includegraphics[scale=0.3]{images/J_60_Schwarz_Reflex_Blue}}
 \title{QM-Cockpit}
 
-\addtobeamertemplate{title page}{\vspace{1\baselineskip}\hspace{-9ex}\includegraphics[scale=.5]{images/Flaticon_SVGFiles/platform11}\vspace{-2\baselineskip}}
+\addtobeamertemplate{title page}{\vspace{1\baselineskip}\hspace{-9ex}\includegraphics[scale=.5]{images/platform11}\vspace{-2\baselineskip}}
 
 %\addtobeamertemplate{frametitle}{}{
 %\begin{textblock*}{100mm}(-4.15cm,-.55cm)
@@ -42,7 +44,7 @@
 
 \keywords{Abschlusspr"ufung, Fachinformatiker, SAP, Quali"atsmanagement,
 Lager, Warenwirtschaft}
-\date{\today}
+\date{\theDate}
 
 \frenchspacing
 
@@ -68,7 +70,7 @@ Lager, Warenwirtschaft}
 						\item Versandhandelsgruppe
 						\item Hauptsitz in Aachen
 						\item ca. 540 Mitarbeiter
-						\item vertreten in 7 L"andern
+						\item vertreten in 6 L"andern
 				\end{itemize}
 			\end{block}
 
@@ -109,7 +111,7 @@ Lager, Warenwirtschaft}
 
 \section{Das Projekt}
 \subsection{Ist-Analyse}
-\begin{frame}[<+->]{Analyse}
+\begin{frame}[<+->]{Ist-Analyse}
 	\begin{block}{Methoden}
 		\begin{itemize}[<+->]
 			\item Arbeitsbeobachtung
@@ -117,7 +119,7 @@ Lager, Warenwirtschaft}
 			\item Datenbankanalyse
 		\end{itemize}
 	\end{block}
-	\begin{block}{Erkenntnisse}
+	\begin{block}{Ergebnis}
 		\begin{itemize}[<+->]
 			\item Personalplanung: saisonale Schwankungen
 			\item keine Standardfunktionalit"at
@@ -173,12 +175,55 @@ Lager, Warenwirtschaft}
 
 \section{Fazit}
 \subsection{Projektergebnis}
-\begin{frame}{\alt<1>{70 Stunden Projektzeit}{80\,\% Zeitersparnis}}
-\includegraphics<2->[width=\textwidth]{Balken}
+\begin{frame}{Projektergebnis}
+
+ \begin{overlayarea}{\textwidth}{.67\textheight}
+   \vspace{3ex}
+	\begin{figure}[b]
+	\only<2>{\includegraphics[scale=.45]{Uhr}}
+	\only<3>{\includegraphics[width=\textwidth]{Balken}}
+	\end{figure}
+ \end{overlayarea}
+ 
+ \begin{overlayarea}{\textwidth}{.33\textheight}
+ \only<2>{
+	{\huge{69\,h Entwicklungszeit}}
+ }
+ \only<3>{
+	{\huge{86\,\% Zeitersparnis}}
+ }
+ \end{overlayarea}
+
 \end{frame}
 \subsection{Lessons Learned}
+\begin{frame}[<+->]{Lessons Learned}
+\begin{block}{Anf"angliche Bef"urchtung}
+\begin{itemize}
+\item{Anforderung zu komplex}
+\item{Zeit zu knapp}
+\item{zu starke Konkretisierung}
+\end{itemize}
+\end{block}
+\begin{block}{gewonnene Erkenntnisse}
+\begin{itemize}
+\item{Top-Down-Prinzip}
+\item{Einsatz von Entwurfsmustern}
+\item{Iteratives Entwicklungsmodell}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Entwicklungsprozess}
+\includegraphics[width=\textwidth]{FDD5}
+\end{frame}
+
 \begin{frame}{}
-TODO
+\begin{center}
+\huge{Vielen Dank f"ur Ihre\\Aufmerksamkeit}\\
+\begin{figure}[b!]
+\includegraphics{images/platform11b}
+\end{figure}
+\end{center}
 \end{frame}
 
 \end{document}
