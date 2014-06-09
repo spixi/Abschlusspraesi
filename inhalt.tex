@@ -27,10 +27,8 @@
 
 \author{Marius Spix}
 
-\institute[\raisebox{-1ex}{\includegraphics[height=0.24cm]{images/JW_Kontur}}]{\includegraphics[scale=0.3]{images/J_60_Schwarz_Reflex_Blue}}
+\institute[\raisebox{-4mm}{\includegraphics[width=1.8cm]{images/JW_Kontur}}]{\includegraphics[scale=0.3]{images/J_60_Schwarz_Reflex_Blue}}
 \title{QM-Cockpit}
-
-\addtobeamertemplate{title page}{\vspace{1\baselineskip}\hspace{-9ex}\includegraphics[scale=.5]{images/platform11}\vspace{-2\baselineskip}}
 
 %\addtobeamertemplate{frametitle}{}{
 %\begin{textblock*}{100mm}(-4.15cm,-.55cm)
@@ -106,12 +104,40 @@ Lager, Warenwirtschaft}
 
 \subsection{Prozess Wareneingang}
 \begin{frame}{Wareneingang}
- \includegraphics[width=.9\textwidth]{Wareneingang2}
+ \begin{overlayarea}{\textwidth}{.42\textheight}
+ 	\only<1>{\includegraphics[width=.9\textwidth]{WE0a}<handout:0>}
+ 	\only<2>{\includegraphics[width=.9\textwidth]{WE1a}<handout:0>}
+ 	\only<3>{\includegraphics[width=.9\textwidth]{WE2a}<handout:0>}
+ 	\only<4->{\includegraphics[width=.9\textwidth]{WE3a}}
+ \end{overlayarea}
+ \begin{overlayarea}{\textwidth}{.58\textheight}
+ \only<5->{
+ 	\vspace{-1ex}
+ 	\hrulefill
+ 	\begin{figure}[tbh!]
+ 	\centering
+ 	\includegraphics[height=.3\textwidth]{Kapazitaet}
+ 	\end{figure}
+ }
+ \end{overlayarea}
 \end{frame}
 
 \section{Das Projekt}
 \subsection{Ist-Analyse}
 \begin{frame}[<+->]{Ist-Analyse}
+	\begin{block}{Situation}
+		\begin{itemize}[<+->]
+			\item Personalplanung: saisonale Schwankungen
+			\item{SAP-Einf"uhrung: 2011
+			\begin{itemize}
+				\item keine Standardfunktionalit"at
+				\item diverse Datenquellen
+				\item hoher Normalisierungsgrad
+			\end{itemize}
+			}
+			\item Altsystem: Drucklisten
+		\end{itemize}
+	\end{block}
 	\begin{block}{Methoden}
 		\begin{itemize}[<+->]
 			\item Arbeitsbeobachtung
@@ -119,14 +145,24 @@ Lager, Warenwirtschaft}
 			\item Datenbankanalyse
 		\end{itemize}
 	\end{block}
-	\begin{block}{Ergebnis}
-		\begin{itemize}[<+->]
-			\item Personalplanung: saisonale Schwankungen
-			\item keine Standardfunktionalit"at
-			\item diverse Datenquellen
-			\item hoher Normalisierungsgrad
-		\end{itemize}
-	\end{block}
+\end{frame}
+
+\begin{frame}{Derzeitige L"osung}
+	\begin{figure}[tbh!]
+		\includegraphics[width=\textwidth]{Strichliste}
+	\end{figure}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{figure}[tbh!]
+				\includegraphics[width=.7\textwidth]{Excel}
+			\end{figure}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}[tbh!]
+				\includegraphics[width=.7\textwidth]{Uhr}
+			\end{figure}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \subsection{Soll-Konzept}
@@ -147,7 +183,15 @@ Lager, Warenwirtschaft}
 			\item Erweiterbarkeit
 		\end{itemize}
 	\end{block}
-
+\end{frame}
+\begin{frame}[<+->]{Herausforderungen}
+	\begin{block}{Ziel}
+		\begin{description}[otherdescription]
+			\item{Performance}{denormalisiertes Datenmodell}
+			\item{Foo}{bar}
+			\item{Z"ahlung der Pr"uflose erm"oglichen}{Hilfsspalte zum Kumulieren}
+		\end{description}
+	\end{block}
 \end{frame}
 
 \subsection{Durchf"uhrung}
@@ -161,6 +205,11 @@ Lager, Warenwirtschaft}
   \only<5>{\includegraphics[width=\textwidth]{FDD5}}
  \end{overlayarea}
 \end{frame}
+\begin{frame}{Komponenten}
+\begin{figure}[tb]
+\includegraphics[width=.9\textwidth]{Komponenten}
+\end{figure}
+\end{frame}
 \begin{frame}{Aufbau QM-Cockpit}
  \vspace{3ex}
  \begin{overlayarea}{\textwidth}{.67\textheight}
@@ -173,30 +222,38 @@ Lager, Warenwirtschaft}
  \begin{block}{\onslide<2->\textbf<2>{Model} \onslide<3->\textbf<3>{View} \onslide<4->\textbf<4>{Presenter}}\end{block}
 \end{frame}
 
-\section{Fazit}
-\subsection{Projektergebnis}
+\section{Projektergebnis}
+\subsection{Soll-Ist-Vergleich}
 \begin{frame}{Projektergebnis}
-
  \begin{overlayarea}{\textwidth}{.67\textheight}
    \vspace{3ex}
 	\begin{figure}[b]
-	\only<2>{\includegraphics[scale=.45]{Uhr}}
-	\only<3>{\includegraphics[width=\textwidth]{Balken}}
+	\only<2>{\includegraphics[height=.48\textwidth]{Uhr}}
+	\only<3>{\includegraphics[height=.48\textwidth]{Kreisdiagramm}}
+	\only<4>{\includegraphics[height=.48\textwidth]{Strichliste}}
+	\only<4>{\huge{TODO!}}
 	\end{figure}
  \end{overlayarea}
  
  \begin{overlayarea}{\textwidth}{.33\textheight}
+ \centering
  \only<2>{
 	{\huge{69\,h Entwicklungszeit}}
  }
  \only<3>{
 	{\huge{86\,\% Zeitersparnis}}
  }
+ \only<4>{
+	{Vorher}
+ }
+ \only<5>{
+	{Nachher}
+ }
  \end{overlayarea}
 
 \end{frame}
-\subsection{Lessons Learned}
-\begin{frame}[<+->]{Lessons Learned}
+\subsection{Fazit}
+\begin{frame}[<+->]{Fazit}
 \begin{block}{Anf"angliche Bef"urchtung}
 \begin{itemize}
 \item{Anforderung zu komplex}

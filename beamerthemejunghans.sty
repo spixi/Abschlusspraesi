@@ -1,35 +1,34 @@
 \ProvidesPackage{beamerthemejunghans}[2014/03/01]
 \usepackage{ifsym}
 
-\usetheme{Bergen}
+\useinnertheme{rectangles}
+\useoutertheme[right,width=2cm,height=0pt]{sidebar}
 \usefonttheme{junghans}
 \usecolortheme{junghans}
-\useoutertheme[subsection=true]{miniframes}
+\setbeamercovered{transparent}
+
+\addtobeamertemplate{title page}{\vspace{1\baselineskip}\hspace{-9ex}\includegraphics[scale=.5]{images/platform11}\vspace{-2\baselineskip}}
+
 \newcommand{\jug@frameofframes}{/}
 \newcommand{\setframeofframes}[1]{\renewcommand{\jug@frameofframes}{#1}}
-\setbeamertemplate{footline}
-  {%
-    \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
-    \end{beamercolorbox}
-    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
-      leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
-      \leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}%
-      \hfill%
-      {\usebeamerfont{institute in head/foot}\usebeamercolor[fg]{institute in head/foot}\insertshortinstitute}%
-    \end{beamercolorbox}%
-    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
-      leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
-      {\usebeamerfont{title in head/foot}\insertshorttitle}%
-      \hfill%
-      {\usebeamerfont{frame number}\usebeamercolor[fg]{frame
-      number}\insertframenumber~\jug@frameofframes~\inserttotalframenumber} \end{beamercolorbox}%
-    \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
-    \end{beamercolorbox}
-  }
 
-\setbeamertemplate{mini frame}[box]
-\setbeamertemplate{mini frame in current subsection}[box]
-\beamer@boxsize=6px
+\addtobeamertemplate{sidebar \beamer@sidebarside}{}
+{
+\begin{beamercolorbox}[wd=\the\beamer@sidebarwidth]{institute in sidebar}
+\usebeamerfont{institute in sidebar}\hspace{1mm}\insertshortinstitute
+\end{beamercolorbox}
+\begin{beamercolorbox}[ht=1px]{upper separation line foot}
+\end{beamercolorbox}
+\begin{beamercolorbox}[wd=\the\beamer@sidebarwidth]{page number in sidebar}
+\usebeamerfont{page number in sidebar}
+\centering
+\insertframenumber~\jug@frameofframes~\inserttotalframenumber
+\end{beamercolorbox}
+\begin{beamercolorbox}[ht=1px]{lower separation line foot}
+\end{beamercolorbox}
+}
+
+
 \setbeamertemplate{navigation symbols}{} %keine Navigationssymbole
 
-\addtobeamertemplate{background canvas}{\transfade}{} %Übergangseffekt
+\addtobeamertemplate{background canvas}{\transfade[duration=.5]}{} %Übergangseffekt
