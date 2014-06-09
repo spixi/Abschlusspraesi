@@ -169,27 +169,18 @@ Lager, Warenwirtschaft}
 \begin{frame}[<+->]{Soll-Konzept}
 	\begin{block}{Ziel}
 		\begin{itemize}
-			\item Vereinfachung der Auswertungen 
+			\item schnelle Online-Auswertungen
 			\item zentrale Controlling-Oberfl"ache
+			\item nahtlose Integration ins SAP-Umfeld
 			\item Auswertung der Pr"uflosbearbeitungszeit 
 		\end{itemize}
 	\end{block}
 	
-	\begin{block}{Kriterien}
-		\begin{itemize}
-			\item nahtlose Integration in SAP
-			\item aktuelle Daten
-			\item hohe Performance
-			\item Erweiterbarkeit
-		\end{itemize}
-	\end{block}
-\end{frame}
-\begin{frame}[<+->]{Herausforderungen}
-	\begin{block}{Ziel}
-		\begin{description}[otherdescription]
-			\item{Performance}{denormalisiertes Datenmodell}
-			\item{Foo}{bar}
-			\item{Z"ahlung der Pr"uflose erm"oglichen}{Hilfsspalte zum Kumulieren}
+	\begin{block}{Herausforderungen}
+		\begin{description}[Z"ahlung im ALV Grid]
+			\item[Performance]{denormalisiertes Datenmodell}
+			\item[Erweiterbarkeit]{Steuertabelle + Factory}
+			\item[Z"ahlung im ALV Grid]{Hilfsspalte zum Kumulieren}
 		\end{description}
 	\end{block}
 \end{frame}
@@ -221,6 +212,10 @@ Lager, Warenwirtschaft}
  \end{overlayarea}
  \begin{block}{\onslide<2->\textbf<2>{Model} \onslide<3->\textbf<3>{View} \onslide<4->\textbf<4>{Presenter}}\end{block}
 \end{frame}
+\begin{frame}{QM-Cockpit}
+	\huge{TODO} %Cockpit
+	            %Auswertungsmodul
+\end{frame}
 
 \section{Projektergebnis}
 \subsection{Soll-Ist-Vergleich}
@@ -230,8 +225,8 @@ Lager, Warenwirtschaft}
 	\begin{figure}[b]
 	\only<2>{\includegraphics[height=.48\textwidth]{Uhr}}
 	\only<3>{\includegraphics[height=.48\textwidth]{Kreisdiagramm}}
-	\only<4>{\includegraphics[height=.48\textwidth]{Strichliste}}
-	\only<4>{\huge{TODO!}}
+	\only<4>{\includegraphics[height=.36\textwidth]{Strichliste}}
+	\only<5>{\huge{TODO!}}
 	\end{figure}
  \end{overlayarea}
  
@@ -244,10 +239,10 @@ Lager, Warenwirtschaft}
 	{\huge{86\,\% Zeitersparnis}}
  }
  \only<4>{
-	{Vorher}
+	{\huge{Vorher}}
  }
  \only<5>{
-	{Nachher}
+	{\huge{Nachher}}
  }
  \end{overlayarea}
 
@@ -258,20 +253,20 @@ Lager, Warenwirtschaft}
 \begin{itemize}
 \item{Anforderung zu komplex}
 \item{Zeit zu knapp}
+\end{itemize}
+\end{block}
+\begin{block}{Aufgetretene Probleme}
+\begin{itemize}
 \item{zu starke Konkretisierung}
+\item{Dokumentation $\Leftrightarrow$ Implementierung}
 \end{itemize}
 \end{block}
 \begin{block}{gewonnene Erkenntnisse}
 \begin{itemize}
 \item{Top-Down-Prinzip}
-\item{Einsatz von Entwurfsmustern}
-\item{Iteratives Entwicklungsmodell}
+\item{Iterative Vorgehensweise}
 \end{itemize}
 \end{block}
-\end{frame}
-
-\begin{frame}{Entwicklungsprozess}
-\includegraphics[width=\textwidth]{FDD5}
 \end{frame}
 
 \begin{frame}{}
