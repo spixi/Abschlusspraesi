@@ -2,12 +2,10 @@
 \usepackage{ifsym}
 
 \useinnertheme{rectangles}
-\useoutertheme[right,width=2cm,height=0pt]{sidebar}
+\useoutertheme[right,width=2.3cm,height=0pt]{sidebar}
 \usefonttheme{junghans}
 \usecolortheme{junghans}
 \setbeamercovered{transparent}
-
-\addtobeamertemplate{title page}{\vspace{1\baselineskip}\hspace{-9ex}\includegraphics[scale=.5]{images/platform11}\vspace{-2\baselineskip}}
 
 \newcommand{\jug@frameofframes}{/}
 \newcommand{\setframeofframes}[1]{\renewcommand{\jug@frameofframes}{#1}}
@@ -15,7 +13,7 @@
 \addtobeamertemplate{sidebar \beamer@sidebarside}{}
 {
 \begin{beamercolorbox}[wd=\the\beamer@sidebarwidth]{institute in sidebar}
-\usebeamerfont{institute in sidebar}\hspace{1mm}\insertshortinstitute
+\usebeamerfont{institute in sidebar}\hspace*{2mm}\insertshortinstitute
 \end{beamercolorbox}
 \begin{beamercolorbox}[ht=1px]{upper separation line foot}
 \end{beamercolorbox}
