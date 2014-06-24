@@ -9,7 +9,9 @@
 \usepackage[NewCommands,NewParameters]{ragged2e}
 \usepackage{tikz}
 \usepackage{eurosym}
+\usepackage{amssymb}
 \usepackage{textpos}
+%\usepackage{pstricks,auto-pst-pdf}
 \usepackage{comment}
 
 \usetheme{junghans}
@@ -17,8 +19,7 @@
 \def\insertauthorindicator{Wer?}% Default is "Who?"
 \def\insertinstituteindicator{Von?}% Default is "From?"
 \def\insertdateindicator{Wann?}% Default is "When?"
-%\def\theDate{\today}
-\def\theDate{13. Juni 2014}
+\def\theDate{\today}
 
 %\setbeamertemplate{caption}[numbered]
 
@@ -40,7 +41,7 @@
 \newtranslation[to=ngerman]{Section}{Abschnitt}
 \newtranslation[to=ngerman]{Subsection}{Unterabschnitt}
 
-\keywords{Abschlusspr"ufung, Fachinformatiker, SAP, Quali"atsmanagement,
+\keywords{Abschlusspr\"{u}fung, Fachinformatiker, SAP, Quali\"{a}tsmanagement,
 Lager, Warenwirtschaft}
 \date{\theDate}
 
@@ -75,7 +76,7 @@ Lager, Warenwirtschaft}
 				\end{itemize}
 			\end{block}
 			\vspace*{2ex}
-			\begin{block}{Sortimente}
+			\begin{block}{}
 				\hspace*{.37\textwidth}
 				\includegraphics[width=.63\textwidth]{images/J_60_Schwarz_Reflex_Blue}
 				\\
@@ -97,10 +98,28 @@ Lager, Warenwirtschaft}
  \only<5->{
  	\vspace{-1ex}
  	\hrulefill
- 	\begin{figure}[tbh!]
- 	\centering
- 	\includegraphics[height=.3\textwidth]{images/Kapazitaet}
- 	\end{figure}
+	\begin{columns}
+		\begin{column}{.3\textwidth}
+			\begin{minipage}[b]{\textwidth}
+				\vspace{6\baselineskip}
+				\centering
+				\uncover<6->{\LARGE{600} \vspace{0pt} \normalsize{Anlieferungen}}
+			\end{minipage}
+		\end{column}
+		\begin{column}{.4\textwidth}
+ 			\begin{figure}[tbh!]
+ 				\centering
+				\includegraphics[width=\textwidth]{images/Kapazitaet}
+ 			\end{figure}
+		\end{column}
+		\begin{column}{.3\textwidth}
+			\begin{minipage}[b]{\textwidth}
+				\vspace{6\baselineskip}
+				\centering
+				\uncover<7->{\LARGE{2500} \vspace{0pt} \normalsize{Pr"uflose/Monat}}
+			\end{minipage}
+		\end{column}
+	\end{columns}
  }
  \end{overlayarea}
 \end{frame}
@@ -110,67 +129,62 @@ Lager, Warenwirtschaft}
 \begin{frame}[<+->]{Ist-Analyse}
 	\begin{block}{Situation}
 		\begin{itemize}[<+->]
-			\item Personalplanung: saisonale Schwankungen
-			\item{SAP-Einf"uhrung: 2011
-			\begin{itemize}
-				\item keine Standardfunktionalit"at
-				\item diverse Datenquellen
-				\item hoher Normalisierungsgrad
-			\end{itemize}
+			\item schwankender Personalbedarf
+			\item {zeitaufw"andige, manuelle Personalplanung 
+				\begin{itemize}
+					\item Strichlisten, Excel-Tabellen \ldots
+				\end{itemize}
 			}
-			\item Altsystem: Drucklisten
+			\item {keine SAP-Standardfunktionalit"at}
+			\item {zahlreiche Einflussfaktoren
+				\begin{itemize}
+					\item u.~A. "`Anwenderstatus"' der Pr"uflose \ldots
+				\end{itemize}
+			}
 		\end{itemize}
 	\end{block}
-	\begin{block}{Methoden}
+	\begin{block}{Auswirkungen}
 		\begin{itemize}[<+->]
-			\item Arbeitsbeobachtung
-			\item Interview
-			\item Datenbankanalyse
+			\item unn"otiger organisatorischer Aufwand
+			\item schlechte Kapazit"atsauslastung
+			\item hohe R"uckst"ande
+			\item Ursache nicht erkennbar
 		\end{itemize}
 	\end{block}
-\end{frame}
 
-\begin{frame}{Derzeitige L"osung}
-	\begin{figure}[tbh!]
-		\includegraphics[width=\textwidth]{images/Strichliste}
-	\end{figure}
-	\begin{columns}
-		\begin{column}{.45\textwidth}
-			\begin{figure}[tbh!]
-				\includegraphics[width=.65\textwidth]{images/Excel2}
-			\end{figure}
-		\end{column}
-		\begin{column}{.55\textwidth}
-			\begin{figure}[tbh!]
-				\includegraphics[width=.65\textwidth]{images/Uhr}
-			\end{figure}
-		\end{column}
-	\end{columns}
 \end{frame}
 
 \subsection{Soll-Konzept}
 \begin{frame}[<+->]{Soll-Konzept}
-	\begin{block}{Ziel}
+	\begin{block}{Ziele}
 		\begin{itemize}
-			\item Vereinfachung der Personalplanung
-			\item erweiterbare Controlling-Oberfl"ache
-			\item Online-Auswertungen zu Lagerkennzahlen
-			\item 1. Iteration: Pr"uflosbearbeitungszeit
+			\item Zeitersparnis bei der Personalplanung
+			\item Auswertung der abgeschlossenen Pr"uflose
+			\item flexible Erweiterbarkeit
 		\end{itemize}
 	\end{block}
-	
-	\begin{block}{Herausforderungen}
-		\begin{description}[Anwenderstatus]
-			\item[Anwenderstatus]{Priorit"atstabelle}
-			\item[Performance]{denormalisiertes Datenmodell}
-			\item[Erweiterbarkeit]{Komponentenbasis}
-		\end{description}
+	\begin{block}{Abnahmekriterien}
+		\begin{itemize}
+			\item{spontane Auswertungen auf zeitnahen Daten
+			\begin{itemize}
+				\item nach Sortiment, VE, Anwenderstatus \ldots
+			\end{itemize} }
+			\item Ermittlung der Bearbeitungszeit
+			\item{statistische Funktionen
+			\begin{itemize}
+				\item Z"ahlung der Pr"uflose
+				\item summieren, filtern, gruppieren
+				\item Erstellung von Diagrammen
+			\end{itemize} }
+		\end{itemize}
 	\end{block}
 \end{frame}
 
 %\begin{comment}
 
 \subsection{Durchf"uhrung}
+
+\begin{comment}
 \begin{frame}{Entwicklungsprozess}
  \vspace{2ex}
  \begin{overlayarea}{\textwidth}{\textheight}
@@ -181,37 +195,18 @@ Lager, Warenwirtschaft}
   \only<5>{\includegraphics[width=\textwidth]{images/FDD5}}
  \end{overlayarea}
 \end{frame}
-\begin{frame}{Komponenten}
+\end{comment}
+
+\begin{frame}{Modularer Aufbau}
 \begin{figure}[tb]
-\includegraphics[width=.9\textwidth]{images/Komponenten}
+\includegraphics[width=.92\textwidth]{Komponenten}
 \end{figure}
 \end{frame}
-\begin{frame}{Aufbau QM-Cockpit}
- \vspace{3ex}
- \begin{overlayarea}{\textwidth}{.67\textheight}
-  \only<1>{\includegraphics[width=\textwidth]{images/MVP0}<handout:0>}
-  \only<2>{\includegraphics[width=\textwidth]{images/MVP1}<handout:0>}
-  \only<3>{\includegraphics[width=\textwidth]{images/MVP2}<handout:0>}
-  \only<4>{\includegraphics[width=\textwidth]{images/MVP3}<handout:0>}
-  \only<5>{\includegraphics[width=\textwidth]{images/MVP4}}
- \end{overlayarea}
- \begin{block}{\onslide<2->\textbf<2>{Model} \onslide<3->\textbf<3>{View} \onslide<4->\textbf<4>{Presenter}}\end{block}
-\end{frame}
-\begin{frame}{QM-Cockpit}
-	\begin{columns}
-		\begin{column}{.5\textwidth}
-			\centering
- 			\includegraphics[width=.95\textwidth]{images/QMCockpit1.png}
-			\\[2.1ex]
- 			\includegraphics[width=.95\textwidth]{images/QMCockpit3.png}
-		\end{column}
-		\begin{column}{.5\textwidth}
-			\centering
- 			\includegraphics[width=.95\textwidth]{images/QMCockpit2.png}
-			\\
- 			\includegraphics[width=.95\textwidth]{images/QMCockpit4.png}
-		\end{column}
-	\end{columns}
+
+\begin{frame}{Dynamische Erweiterbarkeit}
+\begin{figure}[tb]
+\includegraphics[width=\textwidth]{images/ErweiterbarkeitA}
+\end{figure}
 \end{frame}
 
 \section{Ergebnis}
@@ -220,52 +215,89 @@ Lager, Warenwirtschaft}
  \begin{overlayarea}{\textwidth}{.67\textheight}
    \vspace{3ex}
 	\begin{figure}[b]
-	\only<2>{\includegraphics[height=.48\textwidth]{images/Uhr}}
-	\only<3>{\includegraphics[height=.48\textwidth]{images/Kreisdiagramm}}
-	\only<4>{\includegraphics[height=.36\textwidth]{images/Strichliste}}
-	\only<5>{\includegraphics[height=.48\textwidth]{images/QMCockpit2}}
+		\only<2>{\includegraphics[height=.48\textwidth]{images/Uhr}}
+
+		\only<3-4> {
+			\begin{columns}
+				\begin{column}{.5\textwidth}
+						\includegraphics[width=.9\textwidth]{images/Strichliste}
+				\end{column}
+				\begin{column}{.5\textwidth}
+					\alt<4>{
+						\includegraphics[width=.9\textwidth]{images/QMCockpit2}}
+						{\phantom{\includegraphics[width=.9\textwidth]{images/QMCockpit2}}}
+				\end{column}
+			\end{columns}
+		}
+
+		\only<5->{\includegraphics[height=.48\textwidth]{images/Kreisdiagramm}}
 	\end{figure}
  \end{overlayarea}
  
  \begin{overlayarea}{\textwidth}{.33\textheight}
  \centering
  \only<2>{
-	{\huge{69\,h Entwicklungszeit}}
+	{\huge{69\,h Durchf"uhrungszeit}}
  }
- \only<3>{
+
+\only<3-4> {
+		\begin{columns}
+			\begin{column}{.5\textwidth}
+				{\huge{Vorher: $1 \frac{3}{4}$\,h}}
+			\end{column}
+			\begin{column}{.5\textwidth}
+				 \only<4>{
+					{\huge{Nachher: $\frac{1}{4}$\,h}}
+ 				}
+			\end{column}
+		\end{columns}
+	}
+
+ \only<5>{
 	{\huge{86\,\% Zeitersparnis}}
  }
- \only<4>{
-	{\huge{Vorher}}
- }
- \only<5>{
-	{\huge{Nachher}}
- }
  \end{overlayarea}
+\end{frame}
 
+\begin{frame}{Einblicke}
+	\begin{figure}[hbt!]
+		\only<1>{\includegraphics[width=.92\textwidth]{images/QMCockpit2}}
+		\only<2>{
+			\includegraphics[width=.8\textwidth]{images/QMCockpit4}
+		}
+		\only<3>{
+			\includegraphics[width=.8\textwidth]{images/QMCockpit4a}
+		}
+	\end{figure}
 \end{frame}
-\subsection{Fazit}
-\begin{frame}[<+->]{Fazit}
-\begin{block}{Anf"angliche Bef"urchtung}
-\begin{itemize}
-\item{Anforderung zu komplex}
-\item{Zeit zu knapp}
-\end{itemize}
-\end{block}
-\begin{block}{Aufgetretene Probleme}
-\begin{itemize}
-\item{zu starke Konkretisierung}
-\item{Dokumentation $\Leftrightarrow$ Implementierung}
-\end{itemize}
-\end{block}
-\begin{block}{gewonnene Erkenntnisse}
-\begin{itemize}
-\item{Top-Down-Prinzip}
-\item{Iterative Vorgehensweise}
-\end{itemize}
-\end{block}
+
+\subsection{Abschluss}
+\begin{frame}[<+->]{Abschluss}
+	\begin{block}{Soll-Ist-Vergleich}
+		\begin{itemize}
+			\item{Zeitersparnis bei der Personalplanung \checkmark}
+			\item{Auswertung der abgeschlossenen Pr"uflose \checkmark}
+			\item{flexible Erweiterbarkeit \checkmark}
+		\end{itemize}
+	\end{block}
+	\begin{block}{Fazit}
+		\begin{itemize}
+			\item Integrationstest erfolgreich
+			\item live seit 24.\,M"arz\,2014
+			\item Fachbereich zufrieden
+		\end{itemize}
+	\end{block}
+	\begin{block}{Ausblick}
+		\begin{itemize}
+			\item{weitere Auswertungen in Planung
+				\begin{itemize}
+					\item{geplante Anlieferungen}
+					\item{Statistik zur Liefertreue}
+				\end{itemize}
+			}
+		\end{itemize}
+	\end{block}
 \end{frame}
-%\end{comment}
 
 \begin{frame}{}
 \begin{center}
